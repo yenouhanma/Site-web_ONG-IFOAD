@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CDN du framework tailwindcss -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- CDN de la police Inter -->
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+    <!-- CDN pour les icons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="https://www.omneseducation.com/wp-content/uploads/sites/7/2021/10/funcion-de-la-ong.jpeg" type="image/x-icon">
+    <!-- Lien du style css -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>ONG Espoir Déplacés</title>
+</head>
+<body>
+    
+    <!-- Section header -->
+    <header class="bg-white shadow-md fixed w-full z-10">
+        <div class="container mx-auto flex justify-between items-center p-4">
+            <!-- Logo -->
+            <div class="font-bold text-blue-500 logo">
+                <a href="../index.html">
+                    Espoir<span class="text-green-500">Déplacés</span>
+                </a>
+            </div>
+
+            <!-- Menu grand ecran -->
+            <nav class="hidden md:flex space-x-8">
+                <a href="../index.html" class="text-gray-700 hover:text-blue-500 font-medium ligne">Accueil</a>
+                <a href="about.html" class="text-gray-700 hover:text-blue-500 font-medium ligne">À propos</a>
+                <a href="services.html" class="text-gray-700 hover:text-blue-500 font-medium ligne">Services</a>
+                <a href="realisations.html" class="text-gray-700 hover:text-blue-500 font-medium ligne">Nos réalisations</a>
+                <a href="contact.html" class="text-gray-700 hover:text-blue-500 font-medium active">Contact</a>
+            </nav>
+
+            <!-- Icon menu mobile -->
+            <div class="md:hidden">
+                <button id="menu-toggle" class="focus:outline-none">
+                    <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" stroke-width="2"
+                        viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Menu mobile -->
+        <div id="mobile-menu" class="hidden bg-white shadow-md md:hidden">
+            <nav class="flex flex-col space-y-4 p-4">
+                <a href="../index.html" class="text-gray-700 hover:text-blue-500 font-medium ligne">Accueil</a>
+                <a href="about.html" class="text-gray-700 hover:text-blue-500 font-medium ligne">À propos</a>
+                <a href="services.html" class="text-gray-700 hover:text-blue-500 font-medium ligne">Services</a>
+                <a href="realisations.html" class="text-gray-700 hover:text-blue-500 font-medium ligne">Nos réalisations</a>
+                <a href="contact.html" class="text-gray-700 hover:text-blue-500 font-medium active">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenu principal -->
+    <main class="pt-24">
+        <div id="contact" class="text-center text-3xl text-gray-700">Contact</div>
+    </main>
+
+    <!-- Section footer -->
+    <footer class="bg-gray-900 text-white py-10 mt-16">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
+
+            <!-- Logo et Description -->
+            <div>
+                <h2 class="text-2xl font-bold text-blue-400 mb-4">Espoir<span class="text-green-400">Déplacés</span></h2>
+                <p class="text-gray-300 text-sl">
+                    ONG Espoir Déplacés œuvre chaque jour pour améliorer les conditions des déplacés internes
+                    à travers des actions humanitaires concrètes.
+                </p>
+            </div>
+
+            <!-- Liens rapides -->
+            <div>
+                <h3 class="text-xl font-semibold mb-4">Liens rapides</h3>
+                <ul class="space-y-2">
+                    <li><a href="../index.html" class="hover:text-blue-400">Accueil</a></li>
+                    <li><a href="about.html" class="hover:text-blue-400">À propos</a></li>
+                    <li><a href="services.html" class="hover:text-blue-400">Services</a></li>
+                    <li><a href="realisations.html" class="hover:text-blue-400">Nos réalisations</a></li>
+                    <li><a href="contact.html" class="hover:text-blue-400">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Réseaux sociaux -->
+            <div>
+                <h3 class="text-xl font-semibold mb-4">Nous suivre</h3>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-300 hover:text-blue-400" aria-label="Facebook">
+                        <ion-icon name="logo-facebook"></ion-icon>
+                    </a>
+                    <a href="#" class="text-gray-300 hover:text-blue-400" aria-label="Twitter">
+                        <ion-icon name="logo-youtube"></ion-icon>
+                    </a>
+                    <a href="#" class="text-gray-300 hover:text-blue-400" aria-label="Instagram">
+                        <ion-icon name="logo-linkedin"></ion-icon>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="mt-8 text-center text-gray-400 text-sm">
+            &copy; 2025 ONG Espoir Déplacés. Tous droits réservés.
+        </div>
+    </footer>
+
+</body>
+    <!-- Script pour le mode mobile -->
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</html>
