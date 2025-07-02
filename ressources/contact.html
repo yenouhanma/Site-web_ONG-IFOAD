@@ -14,7 +14,7 @@
     <link rel="shortcut icon" href="https://www.omneseducation.com/wp-content/uploads/sites/7/2021/10/funcion-de-la-ong.jpeg" type="image/x-icon">
     <!-- Lien du style css -->
     <link rel="stylesheet" href="css/style.css">
-    <title>ONG Espoir Déplacés</title>
+    <title>Contact | ONG Espoir Déplacés</title>
 </head>
 <body>
     
@@ -61,9 +61,72 @@
     </header>
 
     <!-- Contenu principal -->
-    <main class="pt-24">
-        <div id="contact" class="text-center text-3xl text-gray-700">Contact</div>
-    </main>
+    <!-- SECTION CONTACT -->
+    <section class="pt-28 pb-16 px-4 md:px-0">
+        <div class="container mx-auto max-w-5xl">
+            <h2 class="text-3xl font-bold text-center text-blue-500 mb-8">Contactez-nous</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Formulaire de Contact -->
+                <form class="bg-white p-6 rounded-lg shadow-md space-y-4">
+                    <div>
+                        <label for="name" class="block mb-2 text-sm font-medium text-gray-700">Nom complet</label>
+                        <input type="text" id="name" name="name" class="w-full border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-400" required>
+                    </div>
+
+                    <div>
+                        <label for="email" class="block mb-2 text-sm font-medium text-gray-700">Adresse email</label>
+                        <input type="email" id="email" name="email" class="w-full border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-400" required>
+                    </div>
+
+                    <div>
+                        <label for="message" class="block mb-2 text-sm font-medium text-gray-700">Message</label>
+                        <textarea id="message" name="message" rows="5" class="w-full border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-400" required></textarea>
+                    </div>
+
+                    <button type="submit" class="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600 transition">Envoyer</button>
+                </form>
+
+                <!-- Informations de Contact -->
+                <div class="space-y-6">
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-2 text-green-500">Adresse</h3>
+                        <p class="text-gray-700">Ouagadougou, Burkina Faso</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-2 text-green-500">Téléphone</h3>
+                        <p class="text-gray-700">+226 70 00 00 00</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-2 text-green-500">Email</h3>
+                        <p class="text-gray-700">user@gmail.com</p>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-semibold mb-2 text-green-500">Réseaux sociaux</h3>
+                        <div class="flex space-x-4 mt-2">
+                            <a href="#" class="text-gray-600 hover:text-blue-500">
+                                <ion-icon name="logo-facebook"></ion-icon>
+                            </a>
+                            <a href="#" class="text-gray-600 hover:text-blue-500">
+                                <ion-icon name="logo-youtube"></ion-icon>
+                            </a>
+                            <a href="#" class="text-gray-600 hover:text-blue-500">
+                                <ion-icon name="logo-linkedin"></ion-icon>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carte Google Maps (Exemple statique) -->
+            <div class="mt-12">
+                <iframe class="w-full h-96 rounded-lg shadow-md" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12607.82379824127!2d-1.533447596943813!3d12.370271000000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xe2ebf3df4935433%3A0x4f5e68b6f2e07e5!2sOuagadougou!5e0!3m2!1sfr!2sbf!4v1719786361811!5m2!1sfr!2sbf" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
 
     <!-- Section footer -->
     <footer class="bg-gray-900 text-white py-10 mt-16">
