@@ -44,3 +44,18 @@ ion-icon {
     font-size: 1.5rem;
     transition: color 0.3s ease-in-out;
 }
+
+
+/* Caroussel css */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.animate-carousel {
+    animation: scroll 20s linear infinite;
+}
