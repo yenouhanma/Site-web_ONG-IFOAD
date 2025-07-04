@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CDN du framework tailwindcss -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <!-- CDN de la police Inter -->
-    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
     <!-- CDN pour les icons -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
@@ -60,13 +58,40 @@
         </div>
     </header>
 
-    <!-- Contenu principal -->
-    <section class="pt-28 pb-16 px-4 md:px-0">
-        <div class="container mx-auto max-w-5xl text-center">
+    <section class="slider-container">
+        <div class="slide active" style="background-image: url('galerie/images/photo_1.jpg');">
+        <div class="overlay w-full h-full flex items-center justify-center">
+            <div class="text-center px-6">
             <h1 class="text-4xl md:text-5xl font-bold text-blue-500 mb-4">Bienvenue à <span class="text-green-500">Espoir Déplacés</span></h1>
-            <p class="text-gray-700 mb-8 text-lg">Unis pour offrir un avenir meilleur aux déplacés internes.</p>
-            <a href="ressources/contact.html" class="bg-blue-500 text-white px-6 py-3 rounded hover:bg-blue-600 transition">Nous aider</a>
+            <p class="text-white text-lg md:text-xl mb-6">Unis pour offrir un avenir meilleur aux déplacés internes.</p>
+            <a href="ressources/contact.html" class="bg-blue-500 text-white px-6 py-3 rounded hover:bg-blue-600 transition text-lg">Nous aider</a>
+            </div>
         </div>
+        </div>
+
+        <div class="slide" style="background-image: url('galerie/images/photo_2.jpg');">
+        <div class="overlay w-full h-full flex items-center justify-center">
+            <div class="text-center px-6">
+            <h1 class="text-4xl md:text-5xl font-bold text-green-500 mb-4">Solidarité & Espoir</h1>
+            <p class="text-white text-lg md:text-xl mb-6">Chaque action compte. Ensemble, nous pouvons changer des vies.</p>
+            <a href="ressources/contact.html" class="bg-green-500 text-white px-6 py-3 rounded hover:bg-green-600 transition text-lg">S'impliquer</a>
+            </div>
+        </div>
+        </div>
+
+        <div class="slide" style="background-image: url('galerie/images/photo_3.jpg');">
+        <div class="overlay w-full h-full flex items-center justify-center">
+            <div class="text-center px-6">
+            <h1 class="text-4xl md:text-5xl font-bold text-blue-400 mb-4">Agir Maintenant</h1>
+            <p class="text-white text-lg md:text-xl mb-6">Rejoignez notre cause pour construire un avenir digne.</p>
+            <a href="ressources/contact.html" class="bg-blue-400 text-white px-6 py-3 rounded hover:bg-blue-600 transition text-lg">Faire un don</a>
+            </div>
+        </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <button id="prevBtn" class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/50 text-blue-700 p-3 rounded-full hover:bg-white transition">&#10094;</button>
+        <button id="nextBtn" class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/50 text-blue-700 p-3 rounded-full hover:bg-white transition">&#10095;</button>
     </section>
 
     <!-- SECTION PRESENTATION ONG -->
@@ -75,16 +100,21 @@
             <!-- Texte -->
             <div>
                 <h2 class="text-3xl font-bold text-blue-500 mb-4">Qui sommes-nous ?</h2>
-                <p class="text-gray-700 mb-4">
-                    ONG Espoir Déplacés est une organisation engagée pour la défense des droits et le bien-être des déplacés internes.
-                    Nous travaillons chaque jour pour leur offrir un avenir digne et durable.
+                <p id="intro-text" class="text-gray-700 text-xl mb-4 overflow-hidden">
+                    ONG Espoir Déplacés est une organisation engagée pour la défense des droits et le bien-être des déplacés internes. 
+                    Nous travaillons chaque jour pour leur offrir un avenir digne et durable. 
+                    Nous accompagnons les familles avec des solutions d’hébergement temporaire, d’assistance alimentaire, et d’accompagnement psychosocial.
+                    Grâce à nos bénévoles et partenaires, nous avons pu intervenir efficacement dans plusieurs régions touchées par les crises humanitaires. 
+                    Ensemble, nous construisons un futur meilleur pour les déplacés internes du Burkina Faso.
                 </p>
-                <a href="#" class="bg-green-500 text-white px-6 py-2 rounded hover:bg-green-600 transition">En savoir plus</a>
+                <a href="#" id="toggle-btn" class="bg-green-500 text-white px-6 py-3 rounded hover:bg-green-600 transition">
+                    En savoir plus →
+                </a>
             </div>
 
             <!-- Image -->
             <div>
-                <img src="galerie/images/fond.jpg" alt="Présentation" class="w-full rounded-lg shadow-md">
+                <img src="galerie/images/dons.jpg" alt="Présentation" class="w-full rounded-lg shadow-md">
             </div>
         </div>
     </section>
@@ -95,19 +125,19 @@
             <!-- Stat 1 -->
             <div>
                 <h3 class="text-4xl font-bold text-blue-500 counter" data-target="5000">0</h3>
-                <p class="text-gray-700 mt-2">Déplacés aidés</p>
+                <p class="text-gray-700 text-xl mt-2">Déplacés aidés</p>
             </div>
 
             <!-- Stat 2 -->
             <div>
                 <h3 class="text-4xl font-bold text-green-500 counter" data-target="120">0</h3>
-                <p class="text-gray-700 mt-2">Projets réalisés</p>
+                <p class="text-gray-700 text-xl mt-2">Projets réalisés</p>
             </div>
 
             <!-- Stat 3 -->
             <div>
                 <h3 class="text-4xl font-bold text-blue-500 counter" data-target="300">0</h3>
-                <p class="text-gray-700 mt-2">Bénévoles actifs</p>
+                <p class="text-gray-700 text-xl mt-2">Bénévoles actifs</p>
             </div>
         </div>
     </section>
@@ -116,33 +146,71 @@
     <section class="py-16 px-4 md:px-0 bg-blue-500 text-white text-center">
         <div class="container mx-auto max-w-2xl">
             <h2 class="text-3xl font-bold mb-4">Ensemble, changeons des vies</h2>
-            <p class="mb-6">Votre soutien peut faire une réelle différence pour les déplacés internes. Rejoignez-nous dans cette mission humanitaire !</p>
-            <a href="#" class="bg-green-500 px-6 py-3 rounded hover:bg-green-600 transition">Nous aider</a>
+            <p class="mb-6 text-xl">Votre soutien peut faire une réelle différence pour les déplacés internes. Rejoignez-nous dans cette mission humanitaire !</p>
+            <a href="#" class="bg-green-500 px-6 py-3 text-xl rounded hover:bg-green-600 transition">Nous aider</a>
         </div>
     </section>
 
-    <section class="py-16 md:px-0 text-center">
-        <div class="container mx-auto max-w-2xl">
-            <h2 class="text-3xl font-bold mb-4">Nos sponsors</h2>
-            <!-- <p class="mb-6">Votre soutien peut faire une réelle différence pour les déplacés internes. Rejoignez-nous dans cette mission humanitaire !</p> -->
+    <section class="bg-gray-100 py-16 px-4 md:px-0">
+        <div class="container mx-auto max-w-6xl text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-blue-500 mb-6">Témoignages</h2>
+            <p class="text-gray-700 text-lg text-xl mb-12">Ils ont été aidés, ils partagent leurs histoires.</p>
+
+            <div class="grid gap-8 md:grid-cols-3">
+            
+            <!-- Témoignage 1 -->
+            <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+                <img src="galerie/profil/profil2.png" alt="Témoin 1" class="w-20 h-20 rounded-full mx-auto mb-4 object-cover border-4 border-blue-500">
+                <p class="text-gray-700 italic mb-4 text-xl">"Grâce à l'équipe d’Espoir Déplacés, j’ai pu reprendre une vie normale avec ma famille."</p>
+                <h3 class="text-blue-500 font-bold text-xl">Fatoumata Ouoba</h3>
+                <span class="text-sm text-gray-500 text-xl">Bénéficiaire - Diapaga</span>
+            </div>
+
+            <!-- Témoignage 2 -->
+            <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+                <img src="galerie/profil/profil1.png" alt="Témoin 2" class="w-20 h-20 rounded-full mx-auto mb-4 object-cover border-4 border-green-500">
+                <p class="text-gray-700 italic mb-4 text-xl">"Je ne savais pas vers qui me tourner. Aujourd’hui, j’ai retrouvé l’espoir."</p>
+                <h3 class="text-green-500 font-bold text-xl">Abdoulaye Traoré</h3>
+                <span class="text-sm text-gray-500 text-xl">Réfugié - Dori</span>
+            </div>
+
+            <!-- Témoignage 3 -->
+            <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition">
+                <img src="galerie/profil/profil3.png" alt="Témoin 3" class="w-20 h-20 rounded-full mx-auto mb-4 object-cover border-4 border-blue-400">
+                <p class="text-gray-700 italic mb-4 text-xl">"Un accompagnement humain et concret. Merci pour ce que vous faites chaque jour."</p>
+                <h3 class="text-blue-400 font-bold text-xl">Aïcha Diallo</h3>
+                <span class="text-sm text-gray-500 text-xl">Mère déplacée - Ouahigouya</span>
+            </div>
+
+            </div>
         </div>
     </section>
-    <!-- CARROUSEL INFINI -->
+
+
+    <!-- SECTION SPONSORS -->
+    <section class="py-16 md:px-0 text-center">
+        <div class="container mx-auto max-w-2xl">
+            <h2 class="text-3xl font-bold text-blue-400 mb-4">Nos sponsors</h2>
+            <p class="text-xl">Les différents parténaires sponsors qui nous accompagnement sur cette aide humanitaire.</p>
+        </div>
+    </section>
     <section class="bg-gray-200 py-8 overflow-hidden">
         <div id="carousel" class="flex w-max animate-carousel">
             <img src="galerie/logo/logo1.png" alt="Image 1" class="w-45 h-30 object-cover mx-4 rounded-lg shadow-md">
             <img src="galerie/logo/logo2.png" alt="Image 2" class="w-45 h-30 object-cover mx-4 rounded-lg shadow-md">
             <img src="galerie/logo/logo3.png" alt="Image 3" class="w-45 h-30 object-cover mx-4 rounded-lg shadow-md">
-            <img src="galerie/logo/logo5.png" alt="Image 3" class="w-45 h-30 object-cover mx-4 rounded-lg shadow-md">
-            <img src="galerie/logo/logo6.png" alt="Image 3" class="w-45 h-30 object-cover mx-4 rounded-lg shadow-md">
-            <img src="galerie/logo/logo4.jpg" alt="Image 4" class="w-45 h-30 object-cover mx-4 rounded-lg shadow-md">
+            <img src="galerie/logo/logo5.png" alt="Image 4" class="w-45 h-30 object-cover mx-4 rounded-lg shadow-md">
+            <img src="galerie/logo/logo6.png" alt="Image 5" class="w-45 h-30 object-cover mx-4 rounded-lg shadow-md">
+            <img src="galerie/logo/logo4.jpg" alt="Image 6" class="w-45 h-30 object-cover mx-4 rounded-lg shadow-md">
+            <img src="galerie/logo/logo7.png" alt="Image 7" class="w-45 h-30 object-cover mx-4 rounded-lg shadow-md">
             <!-- On duplique les images pour un effet infini -->
             <img src="galerie/logo/logo1.png" alt="Image 1 bis" class="w-45 h-30 object-cover mx-4 rounded-lg shadow-md">
             <img src="galerie/logo/logo2.png" alt="Image 2 bis" class="w-45 h-30 object-cover mx-4 rounded-lg shadow-md">
             <img src="galerie/logo/logo3.png" alt="Image 3 bis" class="w-45 h-30 object-cover mx-4 rounded-lg shadow-md">
-            <img src="galerie/logo/logo5.png" alt="Image 3 bis" class="w-45 h-30 object-cover mx-4 rounded-lg shadow-md">
-            <img src="galerie/logo/logo6.png" alt="Image 3 bis" class="w-45 h-30 object-cover mx-4 rounded-lg shadow-md">
-            <img src="galerie/logo/logo4.jpg" alt="Image 4 bis" class="w-45 h-30 object-cover mx-4 rounded-lg shadow-md">
+            <img src="galerie/logo/logo5.png" alt="Image 4 bis" class="w-45 h-30 object-cover mx-4 rounded-lg shadow-md">
+            <img src="galerie/logo/logo6.png" alt="Image 5 bis" class="w-45 h-30 object-cover mx-4 rounded-lg shadow-md">
+            <img src="galerie/logo/logo4.jpg" alt="Image 6 bis" class="w-45 h-30 object-cover mx-4 rounded-lg shadow-md">
+            <img src="galerie/logo/logo7.png" alt="Image 6 bis" class="w-45 h-30 object-cover mx-4 rounded-lg shadow-md">
         </div>
     </section>
 
@@ -195,6 +263,9 @@
     </footer>
 
 </body>
+    <button style="cursor: pointer;" id="scrollTopBtn" class="hidden fixed bottom-8 right-8 bg-blue-500 text-white p-3 rounded-full shadow-lg hover:bg-blue-600 transition">
+        <ion-icon name="arrow-up-outline"></ion-icon>
+    </button>
     <!-- Script pour le mode mobile -->
     <script>
         const menuToggle = document.getElementById('menu-toggle');
