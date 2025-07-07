@@ -5,9 +5,7 @@ body{
 .logo{
     font-size: 1.9rem;
 }
-nav a{
-    font-size: 1.3rem;
-}
+
 .active{
     color: #2B7FFF;
     font-weight: 600;
@@ -89,3 +87,80 @@ ion-icon {
 .animate-carousel {
     animation: scroll 20s linear infinite;
 }
+ :root {
+            --primary: #3ABEFF;
+            --secondary: #AAD7A7;
+            --light: #F5F5F5;
+            --dark: #333333;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .bg-primary {
+            background-color: var(--primary) !important;
+        }
+        
+        .text-primary {
+            color: var(--primary) !important;
+        }
+        
+        .bg-secondary {
+            background-color: var(--secondary) !important;
+        }
+        
+        .text-secondary {
+            color: var(--secondary) !important;
+        }
+        
+        .bg-light {
+            background-color: var(--light) !important;
+        }
+        
+        .text-dark {
+            color: var(--dark) !important;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('galerie/images/fond3.jpg');
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+        }
+        
+        .service-card {
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .top-bar {
+            background-color: var(--primary);
+        }
+        
+        .navbar {
+            background-color: white;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            border-color: var(--primary);
+        }
+        
+        .btn-primary:hover {
+            background-color: #2da8e0;
+            border-color: #2da8e0;
+        }
+        
+        .btn-outline-primary {
+            color: var(--primary);
+            border-color: var(--primary);
+        }
+        
+        .btn-outline-primary:hover {
+            background-color: var(--primary);
+            color: white;
+        }
