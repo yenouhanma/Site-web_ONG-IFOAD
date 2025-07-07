@@ -76,3 +76,4 @@ scrollTopBtn.addEventListener('click', () => {
         behavior: 'smooth'
     });
 });
+

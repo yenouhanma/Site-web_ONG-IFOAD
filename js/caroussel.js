@@ -55,3 +55,17 @@ carousel.addEventListener('mouseover', pauseCarousel);
 carousel.addEventListener('mouseout', resumeCarousel);
 
 startCarousel();
+ // Back to top button
+        window.addEventListener('scroll', function() {
+            const backToTopButton = document.getElementById('back-to-top');
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('d-none');
+            } else {
+                backToTopButton.classList.add('d-none');
+            }
+        });
+
+        document.getElementById('back-to-top').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        });

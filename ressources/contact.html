@@ -1,189 +1,250 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <title>ONG Espoir Déplacés - Contactez-nous</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- CDN du framework tailwindcss -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <!-- CDN de la police Inter -->
-    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
-    <!-- CDN pour les icons -->
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <meta name="keywords" content="ONG, aide humanitaire, déplacés internes, Burkina Faso, contact">
+    <meta name="description" content="Contactez l'ONG Espoir Déplacés pour toute question ou pour soutenir notre mission d'aide aux populations déplacées du Burkina Faso">
+
     <!-- Favicon -->
-    <link rel="shortcut icon" href="https://www.omneseducation.com/wp-content/uploads/sites/7/2021/10/funcion-de-la-ong.jpeg" type="image/x-icon">
-    <!-- Lien du style css -->
-    <link rel="stylesheet" href="css/style.css">
-    <title>Contact | ONG Espoir Déplacés</title>
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="ressources/css/style.css">
 </head>
+
 <body>
-    
-    <!-- Section header -->
-    <header class="bg-white shadow-md fixed w-full z-10">
-        <div class="container mx-auto flex justify-between items-center p-4">
-            <!-- Logo -->
-            <div class="font-bold text-blue-500 logo">
-                <a href="../index.html">
-                    Espoir<span class="text-green-500">Déplacés</span>
+    <!-- Spinner (commented out, but kept for reference) -->
+    <!-- <div id="spinner" class="position-fixed w-100 vh-100 bg-white d-flex align-items-center justify-content-center" style="z-index: 9999;">
+        <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Chargement...</span>
+        </div>
+    </div> -->
+
+    <!-- Navbar Start -->
+    <header class="fixed-top">
+        <div class="top-bar text-white py-2 d-none d-lg-block" style="background-color: #343a40;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <small><i class="fas fa-map-marker-alt me-2"></i>Ouagadougou, Burkina Faso</small>
+                        <small class="ms-4"><i class="fas fa-envelope me-2"></i>contact@espoirdeplaces.org</small>
+                    </div>
+                    <div class="col-md-6 text-end">
+                        <small>Suivez-nous :</small>
+                        <a class="text-white ms-3" href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a class="text-white ms-3" href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a class="text-white ms-3" href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-light shadow-sm py-3 bg-white">
+            <div class="container">
+                <a href="index.html" class="navbar-brand">
+                    <h1 class="m-0"><span class="text-primary">Espoir</span><span class="text-dark">Déplacés</span></h1>
                 </a>
-            </div>
-
-            <!-- Menu grand ecran -->
-            <nav class="hidden md:flex space-x-8">
-                <a href="../index.html" class="text-gray-700 hover:text-blue-500 font-medium ligne">Accueil</a>
-                <a href="about.html" class="text-gray-700 hover:text-blue-500 font-medium ligne">À propos</a>
-                <a href="services.html" class="text-gray-700 hover:text-blue-500 font-medium ligne">Services</a>
-                <a href="realisations.html" class="text-gray-700 hover:text-blue-500 font-medium ligne">Nos réalisations</a>
-                <a href="contact.html" class="text-gray-700 hover:text-blue-500 font-medium active">Contact</a>
-            </nav>
-
-            <!-- Icon menu mobile -->
-            <div class="md:hidden">
-                <button id="menu-toggle" class="focus:outline-none">
-                    <svg class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" stroke-width="2"
-                        viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M4 6h16M4 12h16M4 18h16" />
-                    </svg>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
                 </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto">
+                        <a href="index.html" class="nav-item nav-link">Accueil</a>
+                        <a href="ressources/about.html" class="nav-item nav-link">À propos</a>
+                        <a href="ressources/services.html" class="nav-item nav-link">Services</a>
+                        <a href="ressources/realisations.html" class="nav-item nav-link">Nos réalisations</a>
+                        <a href="ressources/contact.html" class="nav-item nav-link active">Contact</a>
+                        <a href="#" class="btn btn-primary ms-lg-3">Faire un don</a>
+                    </div>
+                </div>
             </div>
-        </div>
-
-        <!-- Menu mobile -->
-        <div id="mobile-menu" class="hidden bg-white shadow-md md:hidden">
-            <nav class="flex flex-col space-y-4 p-4">
-                <a href="../index.html" class="text-gray-700 hover:text-blue-500 font-medium ligne">Accueil</a>
-                <a href="about.html" class="text-gray-700 hover:text-blue-500 font-medium ligne">À propos</a>
-                <a href="services.html" class="text-gray-700 hover:text-blue-500 font-medium ligne">Services</a>
-                <a href="realisations.html" class="text-gray-700 hover:text-blue-500 font-medium ligne">Nos réalisations</a>
-                <a href="contact.html" class="text-gray-700 hover:text-blue-500 font-medium active">Contact</a>
-            </nav>
-        </div>
+        </nav>
     </header>
+    <!-- Navbar End -->
 
-    <!-- Contenu principal -->
-    <!-- SECTION CONTACT -->
-    <section class="pt-28 pb-16 px-4 md:px-0">
-        <div class="container mx-auto max-w-5xl">
-            <h2 class="text-3xl font-bold text-center text-blue-500 mb-8">Contactez-nous</h2>
+    <!-- Hero Section Contact -->
+    <section class="hero-section d-flex align-items-center justify-content-center text-center text-white" style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/contact-hero.jpg') center/cover no-repeat; min-height: 400px; margin-top: 150px;">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-4">Contactez-nous</h1>
+            <p class="fs-5">Joignez-vous à notre mission pour aider les déplacés internes du Burkina Faso</p>
+        </div>
+    </section>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- Formulaire de Contact -->
-                <form class="bg-white p-6 rounded-lg shadow-md space-y-4" action="https://formspree.io/f/mkgbelzj" method="POST">
-                    <div>
-                        <label for="name" class="block mb-2 text-sm font-medium text-gray-700">Nom complet</label>
-                        <input type="text" id="name" name="name" class="w-full border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-400" required>
+    <!-- Contact Section -->
+    <section class="py-5">
+        <div class="container py-5">
+            <div class="row g-5">
+                <!-- Contact Form -->
+                <div class="col-lg-6">
+                    <div class="bg-white p-6 rounded shadow-sm">
+                        <h2 class="fw-bold mb-4 text-primary">Envoyez-nous un message</h2>
+                        <form action="https://formspree.io/f/mkgbelzj" method="POST">
+                            <div class="mb-4">
+                                <label for="name" class="form-label fw-medium text-muted">Nom complet</label>
+                                <input type="text" id="name" name="name" class="form-control" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="email" class="form-label fw-medium text-muted">Adresse email</label>
+                                <input type="email" id="email" name="email" class="form-control" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="message" class="form-label fw-medium text-muted">Message</label>
+                                <textarea id="message" name="message" rows="5" class="form-control" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary px-5">Envoyer</button>
+                        </form>
                     </div>
+                </div>
 
-                    <div>
-                        <label for="email" class="block mb-2 text-sm font-medium text-gray-700">Adresse email</label>
-                        <input type="email" id="email" name="email" class="w-full border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-400" required>
-                    </div>
-
-                    <div>
-                        <label for="message" class="block mb-2 text-sm font-medium text-gray-700">Message</label>
-                        <textarea id="message" name="message" rows="5" class="w-full border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-400" required></textarea>
-                    </div>
-
-                    <button type="submit" class="bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600 transition">Envoyer</button>
-                </form>
-
-                <!-- Informations de Contact -->
-                <div class="space-y-6">
-                    <div class="bg-white p-6 rounded-lg shadow-md">
-                        <h3 class="text-xl font-semibold mb-2 text-green-500">Adresse</h3>
-                        <p class="text-gray-700">Ouagadougou, Burkina Faso</p>
-                    </div>
-
-                    <div class="bg-white p-6 rounded-lg shadow-md">
-                        <h3 class="text-xl font-semibold mb-2 text-green-500">Téléphone</h3>
-                        <p class="text-gray-700">+226 25 00 00 00</p>
-                    </div>
-
-                    <div class="bg-white p-6 rounded-lg shadow-md">
-                        <h3 class="text-xl font-semibold mb-2 text-green-500">Email</h3>
-                        <p class="text-gray-700">espoir@ong.com</p>
-                    </div>
-
-                    <div class="bg-white p-6 rounded-lg shadow-md">
-                        <h3 class="text-xl font-semibold mb-2 text-green-500">Réseaux sociaux</h3>
-                        <div class="flex space-x-4 mt-2">
-                            <a href="#" class="text-gray-600 hover:text-blue-500">
-                                <ion-icon name="logo-facebook"></ion-icon>
-                            </a>
-                            <a href="#" class="text-gray-600 hover:text-blue-500">
-                                <ion-icon name="logo-youtube"></ion-icon>
-                            </a>
-                            <a href="#" class="text-gray-600 hover:text-blue-500">
-                                <ion-icon name="logo-linkedin"></ion-icon>
-                            </a>
-                        </div>
+                <!-- Contact Information -->
+                <div class="col-lg-6">
+                    <div class="bg-white p-6 rounded shadow-sm">
+                        <h2 class="fw-bold mb-4 text-primary">Nos coordonnées</h2>
+                        <ul class="list-unstyled text-muted">
+                            <li class="mb-3 d-flex">
+                                <i class="fas fa-map-marker-alt mt-1 me-3 text-primary"></i>
+                                <span>123 Avenue de la Solidarité, Ouagadougou, Burkina Faso</span>
+                            </li>
+                            <li class="mb-3 d-flex">
+                                <i class="fas fa-phone-alt me-3 text-primary"></i>
+                                <span>+226 25 45 67 89</span>
+                            </li>
+                            <li class="mb-3 d-flex">
+                                <i class="fas fa-envelope me-3 text-primary"></i>
+                                <span>contact@espoirdeplaces.org</span>
+                            </li>
+                            <li class="d-flex">
+                                <i class="fas fa-globe me-3 text-primary"></i>
+                                <div class="d-flex gap-3">
+                                    <a href="#" class="text-muted hover:text-primary" aria-label="Facebook"><i class="fab fa-facebook-f fa-lg"></i></a>
+                                    <a href="#" class="text-muted hover:text-primary" aria-label="Twitter"><i class="fab fa-twitter fa-lg"></i></a>
+                                    <a href="#" class="text-muted hover:text-primary" aria-label="YouTube"><i class="fab fa-youtube fa-lg"></i></a>
+                                    <a href="#" class="text-muted hover:text-primary" aria-label="LinkedIn"><i class="fab fa-linkedin-in fa-lg"></i></a>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
 
-            <!-- Carte Google Maps (Exemple statique) -->
-            <div class="mt-12">
-                <iframe class="w-full h-96 rounded-lg shadow-md" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12607.82379824127!2d-1.533447596943813!3d12.370271000000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xe2ebf3df4935433%3A0x4f5e68b6f2e07e5!2sOuagadougou!5e0!3m2!1sfr!2sbf!4v1719786361811!5m2!1sfr!2sbf" allowfullscreen="" loading="lazy"></iframe>
+            <!-- Google Maps -->
+            <div class="mt-5">
+                <iframe class="w-100 rounded shadow-sm" style="height: 400px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12607.82379824127!2d-1.533447596943813!3d12.370271000000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xe2ebf3df4935433%3A0x4f5e68b6f2e07e5!2sOuagadougou!5e0!3m2!1sfr!2sbf!4v1719786361811!5m2!1sfr!2sbf" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </section>
 
-    <!-- Section footer -->
-    <footer class="bg-gray-900 text-white py-10 mt-16">
-        <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4">
-
-            <!-- Logo et Description -->
-            <div>
-                <h2 class="text-2xl font-bold text-blue-400 mb-4">Espoir<span class="text-green-400">Déplacés</span></h2>
-                <p class="text-gray-300 text-sl">
-                    ONG Espoir Déplacés œuvre chaque jour pour améliorer les conditions des déplacés internes
-                    à travers des actions humanitaires concrètes.
-                </p>
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-5 pb-4">
+        <div class="container">
+            <div class="row g-5 mb-5">
+                <!-- About -->
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="fw-bold mb-4">
+                        <span class="text-primary">ONG</span> Espoir Déplacés
+                    </h3>
+                    <p class="text-muted mb-4">Nous nous engageons à apporter une aide humanitaire complète aux populations déplacées internes du Burkina Faso.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-white hover:text-primary" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white hover:text-primary słów
+                        <a href="#" class="text-white hover:text-primary" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white hover:text-primary" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white hover:text-primary" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="fw-bold mb-4">Liens rapides</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-white hover:text-primary">Accueil</a></li>
+                        <li class="mb-2"><a href="ressources/about.html" class="text-white hover:text-primary">À propos</a></li>
+                        <li class="mb-2"><a href="ressources/services.html" class="text-white hover:text-primary">Services</a></li>
+                        <li class="mb-2"><a href="ressources/realisations.html" class="text-white hover:text-primary">Nos réalisations</a></li>
+                        <li><a href="ressources/contact.html" class="text-white hover:text-primary">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Services -->
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="fw-bold mb-4">Nos services</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white hover:text-primary">Logement d'urgence</a></li>
+                        <li class="mb-2"><a href="#" class="text-white hover:text-primary">Aide alimentaire</a></li>
+                        <li class="mb-2"><a href="#" class="text-white hover:text-primary">Éducation</a></li>
+                        <li class="mb-2"><a href="#" class="text-white hover:text-primary">Soins de santé</a></li>
+                        <li><a href="#" class="text-white hover:text-primary">Formation professionnelle</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact -->
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="fw-bold mb-4">Contactez-nous</h3>
+                    <ul class="list-unstyled text-muted">
+                        <li class="mb-3 d-flex">
+                            <i class="fas fa-map-marker-alt mt-1 me-3 text-primary"></i>
+                            <span>123 Avenue de la Solidarité, Ouagadougou, Burkina Faso</span>
+                        </li>
+                        <li class="mb-3 d-flex">
+                            <i class="fas fa-phone-alt me-3 text-primary"></i>
+                            <span>+226 25 45 67 89</span>
+                        </li>
+                        <li class="d-flex">
+                            <i class="fas fa-envelope me-3 text-primary"></i>
+                            <span>contact@espoirdeplaces.org</span>
+                        </li>
+                    </ul>
+                </div>
             </div>
-
-            <!-- Liens rapides -->
-            <div>
-                <h3 class="text-xl font-semibold mb-4">Liens rapides</h3>
-                <ul class="space-y-2">
-                    <li><a href="../index.html" class="hover:text-blue-400">Accueil</a></li>
-                    <li><a href="about.html" class="hover:text-blue-400">À propos</a></li>
-                    <li><a href="services.html" class="hover:text-blue-400">Services</a></li>
-                    <li><a href="realisations.html" class="hover:text-blue-400">Nos réalisations</a></li>
-                    <li><a href="contact.html" class="hover:text-blue-400">Contact</a></li>
-                </ul>
-            </div>
-
-            <!-- Réseaux sociaux -->
-            <div>
-                <h3 class="text-xl font-semibold mb-4">Nous suivre</h3>
-                <div class="flex space-x-4">
-                    <a href="#" class="text-gray-300 hover:text-blue-400" aria-label="Facebook">
-                        <ion-icon name="logo-facebook"></ion-icon>
-                    </a>
-                    <a href="#" class="text-gray-300 hover:text-blue-400" aria-label="Twitter">
-                        <ion-icon name="logo-youtube"></ion-icon>
-                    </a>
-                    <a href="#" class="text-gray-300 hover:text-blue-400" aria-label="Instagram">
-                        <ion-icon name="logo-linkedin"></ion-icon>
-                    </a>
+            
+            <div class="border-top border-secondary pt-4 d-md-flex justify-content-between align-items-center">
+                <p class="mb-3 mb-md-0">© 2025 ONG Espoir Déplacés. Tous droits réservés.</p>
+                <div class="d-flex gap-4">
+                    <a href="#" class="text-white hover:text-primary">Politique de confidentialité</a>
+                    <a href="#" class="text-white hover:text-primary">Conditions d'utilisation</a>
+                    <a href="#" class="text-white hover:text-primary">Mentions légales</a>
                 </div>
             </div>
         </div>
-
-        <!-- Copyright -->
-        <div class="mt-8 text-center text-gray-400 text-sm">
-            &copy; 2025 ONG Espoir Déplacés. Tous droits réservés.
-        </div>
     </footer>
 
-</body>
-    <!-- Script pour le mode mobile -->
-    <script>
-        const menuToggle = document.getElementById('menu-toggle');
-        const mobileMenu = document.getElementById('mobile-menu');
+    <!-- Back to Top Button -->
+    <a href="#" id="back-to-top" class="position-fixed bottom-0 end-0 bg-primary text-white d-flex align-items-center justify-content-center shadow d-none" style="width: 48px; height: 48px; border-radius: 50%;">
+        <i class="fas fa-arrow-up"></i>
+    </a>
 
-        menuToggle.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="ressources/js/caroussel.js"></script>
+    <script src="ressources/js/animation.js"></script>
+
+    <!-- Back to Top Script -->
+    <script>
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 100) {
+                $('#back-to-top').fadeIn();
+            } else {
+                $('#back-to-top').fadeOut();
+            }
+        });
+        $('#back-to-top').click(function () {
+            $('html, body').animate({ scrollTop: 0 }, 800);
+            return false;
         });
     </script>
+</body>
 </html>
